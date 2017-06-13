@@ -8,7 +8,7 @@ export function app(state = {}, payloadOriginal) {
   const { payload, type } = payloadOriginal;
 
   switch (type) {
-    case types.WHEATHER_INFO_LOAD:
+    case types.WEATHER_INFO_LOAD:
       return handle(state, payloadOriginal, {
         start: prevState => ({
           ...prevState,
@@ -19,7 +19,14 @@ export function app(state = {}, payloadOriginal) {
           loading: false
         }),
         success: prevState => ({
-          ...prevState
+          ...prevState,
+          weatherData: [
+            payload.list.map(city => ({
+              name: city.name,
+              temp: city.main.temp
+            })),
+            ...prevState.weatherData
+          ]
         }),
         failure: prevState => {
           throw new Error(err);

@@ -87,7 +87,7 @@ if (TARGET === 'start' || !TARGET) {
       hot: true,
       hotOnly: true,
       inline: true,
-      https: true,
+      https: false,
       port: process.env.PORT || 4000,
       host: 'localhost',
       publicPath: '/',

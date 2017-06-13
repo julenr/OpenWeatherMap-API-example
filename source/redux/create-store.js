@@ -6,7 +6,7 @@ import reducer from './reducers';
 
 const initialState = {
   app: {
-    wheatherData: []
+    weatherData: []
   }
 };
 let store;

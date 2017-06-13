@@ -1,0 +1,98 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Range component Snapshot 1`] = `
+<div
+  className="sc-bdVaJa jFJYjJ"
+>
+  <div
+    className="sc-bwzfXH kPisAc"
+  >
+    <div
+      className="sc-htpNat jgHHHu"
+    >
+      ciudad1
+    </div>
+    <div
+      className="sc-bxivhb fBbAJl"
+    >
+      1
+      ˚
+    </div>
+    <div>
+      Histórico
+    </div>
+    <div
+      className="sc-ifAKCX bwqiFx"
+    >
+      <div>
+        1
+        ˚
+      </div>
+      <div>
+        2
+        ˚
+      </div>
+    </div>
+  </div>
+  <div
+    className="sc-bwzfXH kPisAc"
+  >
+    <div
+      className="sc-htpNat jgHHHu"
+    >
+      ciudad2
+    </div>
+    <div
+      className="sc-bxivhb fBbAJl"
+    >
+      1
+      ˚
+    </div>
+    <div>
+      Histórico
+    </div>
+    <div
+      className="sc-ifAKCX bwqiFx"
+    >
+      <div>
+        1
+        ˚
+      </div>
+      <div>
+        2
+        ˚
+      </div>
+    </div>
+  </div>
+  <div
+    className="sc-bwzfXH kPisAc"
+  >
+    <div
+      className="sc-htpNat jgHHHu"
+    >
+      ciudad3
+    </div>
+    <div
+      className="sc-bxivhb fBbAJl"
+    >
+      1
+      ˚
+    </div>
+    <div>
+      Histórico
+    </div>
+    <div
+      className="sc-ifAKCX bwqiFx"
+    >
+      <div>
+        1
+        ˚
+      </div>
+      <div>
+        2
+        ˚
+      </div>
+    </div>
+  </div>
+</div>
+`;

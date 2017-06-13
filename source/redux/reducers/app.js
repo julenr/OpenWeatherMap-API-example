@@ -4,35 +4,28 @@ import * as types from '../actions/action-types';
 
 // APP REDUCER
 export function app(state = {}, payloadOriginal) {
-  const newState = { ...state };
   const { payload, type } = payloadOriginal;
 
   switch (type) {
     case types.WEATHER_INFO_LOAD:
       return handle(state, payloadOriginal, {
-        start: prevState => ({
-          ...prevState,
-          loading: true
-        }),
-        finish: prevState => ({
-          ...prevState,
-          loading: false
-        }),
-        success: prevState => ({
-          ...prevState,
-          weatherData: [
-            payload.list.map(city => ({
-              name: city.name,
-              temp: city.main.temp
-            })),
-            ...prevState.weatherData
-          ]
-        }),
+        success: prevState => {
+          const newState = { ...prevState, loading: false, update: !prevState.update  };
+          payload.list.forEach(
+            city =>
+              (newState.cities[city.name] = [
+                Math.round(city.main.temp),
+                ...newState.cities[city.name]
+              ])
+          );
+          return newState;
+        },
         failure: prevState => {
           throw new Error(err);
           return prevState;
         }
       });
+    default:
+      return state;
   }
-  return newState;
 }

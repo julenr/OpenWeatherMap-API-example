@@ -3,10 +3,18 @@ import { middleware as reduxPackMiddleware } from 'redux-pack';
 import thunk from 'redux-thunk';
 
 import reducer from './reducers';
+import { cities } from '../constants';
+
+let citiesObj = {};
+cities.forEach(city => {
+  citiesObj[city.name] = [];
+});
 
 const initialState = {
   app: {
-    weatherData: []
+    loading: true,
+    update: true,
+    cities: citiesObj
   }
 };
 let store;

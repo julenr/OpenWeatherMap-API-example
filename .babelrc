@@ -1,0 +1,30 @@
+{
+  "sourceMaps": true,
+  "presets": [
+    ["env",
+      {
+        "targets": {
+          "android": "56",
+          "chrome": "58",
+          "edge": "15",
+          "firefox": "53",
+          "ios": "10.3",
+          "safari": "10.1"
+        },
+        "modules": false,
+        "loose": true,
+        "debug": true
+      }
+    ],
+    "stage-2",
+    "react"
+  ],
+  "plugins": [
+     "syntax-dynamic-import"
+   ],
+  "env": {
+    "test": {
+      "presets": ["es2015", "react", "stage-2"]
+    }
+  }
+}

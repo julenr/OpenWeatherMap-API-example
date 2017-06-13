@@ -1,0 +1,1 @@
+export const WHEATHER_INFO_LOAD = 'WHEATHER_INFO_LOAD';
